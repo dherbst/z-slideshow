@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="zslideshow">
+  <head>
+    <meta charset="utf-8">
+    <title>z-slideshow</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/zslideshow.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainCtrl">
+    <img ng-show="loaded" class="fullBg {{currentAnimation}}" ng-repeat="slide in slides"
+         ng-if="isCurrentSlideIndex($index)"
+         ng-src="{{slide.src}}">
+
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/angular.1.4.6.min.js"></script>
+    <script src="js/angular-animate.1.4.6.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.13.4.min.js"></script>
+    <script src="js/preloadjs-0.4.1.min.js"></script>
+    <script src="js/zslideshow.js"></script>
+  </body>
+</html>
