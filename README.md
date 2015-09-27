@@ -1,0 +1,2 @@
+# z-slideshow
+Angularjs slideshow
